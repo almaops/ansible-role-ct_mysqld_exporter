@@ -1,4 +1,18 @@
 ---
-- name: "{{ ROLENAME_task_prefix }}"
+- name: "{{ ct_mysqld_exporter_task_prefix }} Enable ports?"
+  ansible.builtin.include_vars: disable_ports.yml
+  when: not ct_mysqld_exporter_enable_ports
 
+- name: "{{ ct_mysqld_exporter_task_prefix }}: postgres exporter"
+  community.docker.docker_container:
+    image: "{{ ct_mysqld_exporter_ct_image }}"
+    name: "{{ ct_mysqld_exporter_ct_name }}"
+    ports: "{{ ct_mysqld_exporter_ct_ports }}"
+    pull: "{{ ct_mysqld_exporter_ct_pull }}"
+    recreate: "{{ ct_mysqld_exporter_ct_recreate }}"
+    restart_policy: "{{ ct_mysqld_exporter_ct_restart_policy }}"
+    restart: "{{ ct_mysqld_exporter_ct_restart }}"
+    state: "{{ ct_mysqld_exporter_ct_state }}"
+    network_mode: "{{ ct_mysqld_exporter_ct_network_mode }}"
+    networks: "{{ ct_mysqld_exporter_ct_networks }}"
 ...
