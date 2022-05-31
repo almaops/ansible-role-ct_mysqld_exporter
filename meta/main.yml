@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: AUTHORNAME
+  description: Ansible role does ...
+  role_name: ROLENAME
+  namespace: almaops
+  license: MIT
+  min_ansible_version: 2.10
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+  galaxy_tags:
+    - todo
+dependencies: []
+...
