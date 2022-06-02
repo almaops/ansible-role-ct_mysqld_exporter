@@ -1,5 +1,6 @@
+[![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](./LICENSE)
+
 # almaops.ct_mysqld_exporter
-[![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 # Role variables
 Please refer to [defaults/main.yml](./defaults/main.yml) for full list of available variables. 

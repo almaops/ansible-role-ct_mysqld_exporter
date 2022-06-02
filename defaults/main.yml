@@ -25,7 +25,6 @@ ct_mysqld_exporter_ct_ports:
 ct_mysqld_exporter_ct_env:
   DATA_SOURCE_NAME: "{{ ct_mysqld_exporter_env_data_source_name }}"
 
-
 # Environment variables
-ct_mysqld_exporter_env_data_source_name: "{{ undef(hint='You should define database connection string in format user:pass@host:port/db') }}"
+# ct_mysqld_exporter_env_data_source_name: "{{ undef }}"
 ...

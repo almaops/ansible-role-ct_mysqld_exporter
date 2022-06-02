@@ -18,7 +18,11 @@ galaxy_info:
     - mysqld
     - prometheus
     - metrics
-    - mysql-exporter
-    - mysqld-exporter
-dependencies: []
+    - exporter
+dependencies:
+  - role: almaops.pip_install
+    version: "v1.0.5"
+    vars:
+      pip_install_packages:
+        - docker
 ...
