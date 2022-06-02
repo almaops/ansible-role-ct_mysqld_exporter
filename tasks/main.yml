@@ -11,4 +11,5 @@
     state: "{{ ct_mysqld_exporter_ct_state }}"
     network_mode: "{{ ct_mysqld_exporter_ct_network_mode }}"
     networks: "{{ ct_mysqld_exporter_ct_networks }}"
+    env: "{{ ct_mysqld_exporter_ct_env }}"
 ...
