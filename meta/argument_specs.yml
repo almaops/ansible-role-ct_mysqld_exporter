@@ -4,7 +4,7 @@ argument_specs:
     short_description: Ensure DATA_SOURCE_NAME is set
     options:
       ct_mysqld_exporter_env_data_source_name:
-        type: "string"
+        type: "str"
         required: true
         description: "Database connection string"
 ...
